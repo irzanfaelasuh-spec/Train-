@@ -1,0 +1,1 @@
+export class SaveSystem{constructor(){this.key='railway-simulator-3d-save';}save(data){try{localStorage.setItem(this.key,JSON.stringify(data))}catch(e){console.warn('Save unavailable',e)}}load(){try{return JSON.parse(localStorage.getItem(this.key)||'{}')}catch{return {}}}clear(){localStorage.removeItem(this.key)}}
